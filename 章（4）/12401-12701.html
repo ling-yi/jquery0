@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery.js" type="text/javascript"></script>	
+		
+		<style text="text/css">
+			#panel{
+				position:relative;
+				width:100px;
+				height:100px;
+				border:1px solid #0050d0;
+				background:#96E555;
+				cursor:pointer;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="panel">
+			
+		</div>
+	</body> 
+	<script type="text/javascript">
+		
+		//jquery中的自定义动画animate()
+		
+		$(function(){
+		
+			//自定义简单动画
+			/*$("#panel").click(function(){
+				$(this).animate({"left":"500px"},3000);
+			});*/
+			
+			//累加、累减动画
+			/*$("#panel").click(function(){
+				$(this).animate({"left":"+=500px"},3000);
+			});*/
+			
+			//多重动画:同时执行
+			/*$("#panel").click(function(){
+				$(this).animate({"left":"500px","height":"200px"},3000);
+			});*/
+			
+			//多重动画：按顺序执行
+			/*$("#panel").click(function(){
+				$(this).animate({"left":"500px"},3000)
+					.animate({"height":"200px"},3000);
+			});*/
+			
+			//综合动画
+			/*$("#panel").css("opacity","0.5");
+			$("#panel").click(function(){
+				
+				$(this).animate({"left":"400px","height":"200px","opacity":"1"},3000)
+					.animate({"top":"200px","width":"200px"},3000)
+					.fadeOut("slow");
+			});*/
+			
+			//动画回调函数
+			$("#panel").css("opacity","0.5");
+			$("#panel").click(function(){
+				
+				$(this).animate({"left":"400px","height":"200px","opacity":"1"},3000)
+					.animate({"top":"200px","width":"200px"},3000,function(){
+						$(this).css("border","5px solid blue")
+					}).fadeOut(1000);
+			});
+		});
+		
+		
+	</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="F:/大前端/jquery/jquery.js" type="text/javascript"></script>	
+		
+		<style text="text/css">
+			#panel{
+				position:relative;
+				width:100px;
+				height:100px;
+				border:1px solid #0050d0;
+				background:#96E555;
+				cursor:pointer;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<p>点我</p>
+		<div id="panel">
+			
+		</div>
+	</body> 
+	<script type="text/javascript">
+		
+		//其他动画方法
+		
+		$(function(){
+		
+			//toggle()方法
+			/*$("p").click(function(){
+				$(this).next().toggle();
+			});*/
+			
+			//slideToggle()方法
+			/*$("p").click(function(){
+				$(this).next().slideToggle();
+			});*/
+			
+			//fadeToggle()方法
+			/*$("p").click(function(){
+				$(this).next().fadeToggle();
+			});*/
+			
+			//fadeTo()方法
+			$("p").click(function(){
+				$(this).next().fadeTo(600,0.2);
+			});
+		});
+		
+		
+	</script>
+</html>

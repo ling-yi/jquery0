@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery.js" type="text/javascript"></script>	
+		
+		<style text="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<p title="选择你最喜欢的水果.">你最喜欢的水果？</p>
+		<ul>
+			<li title="苹果">苹果</li>
+			<li title="橘子">橘子</li>
+			<li title="菠萝">菠萝</li>
+		</ul>
+	</body> 
+	<script type="text/javascript">
+		$(function(){
+			//03
+			/*$("ul")
+				.append($("<li title='香蕉'>香蕉</li>"))
+				.prepend($("<li title='雪梨'>雪梨</li>"));
+			$("ul li:eq(2)")
+				.after("<li title='其他'>其他</li>");*/
+				
+			//04
+			$("ul li:eq(2)").insertBefore($("ul li:eq(1)"));
+		});
+	</script>
+</html>

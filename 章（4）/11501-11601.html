@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery.js" type="text/javascript"></script>	
+		
+		<style text="text/css">
+			
+		</style>
+		
+	</head>
+	<body>
+		<button id="btn">点击我</button>
+			<button id="delAll">删除所有事件</button>
+			<button id="delTwo">删除第二个事件</button>
+			<div id="test"></div>
+	</body> 
+	<script type="text/javascript">
+		
+		//移除事件
+		
+		$(function(){
+		    $("#btn").bind("click",myFun1=function(){
+				$("#test").append("<p>我的绑定元素1</p>");
+			}).bind("click",myFun2=function(){
+				$("#test").append("<p>我的绑定元素2</p>");
+			}).bind("click",myFun3=function(){
+				$("#test").append("<p>我的绑定元素3</p>");
+			});
+			
+			//移除所有事件
+			$("#delAll").bind("click",function(){
+				$("#btn").unbind();
+			});
+			
+			//移除一个事件
+			$("#delTwo").bind("click",function(){
+				$("#btn").unbind("click",myFun2);
+			});
+		});
+		
+		
+	</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery.js" type="text/javascript"></script>	
+	</head>
+	<body>
+		<input id="btn1" type="checkbox" value="1" name="check" checked="checked">
+		<input id="btn1" type="checkbox" value="2" name="check">
+		<input id="btn1" type="checkbox" value="3" name="check" checked="checked">
+		<input type="button" value="你选中的个数" id="btn">
+	</body> 
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		btn.onclick = function(){
+			var arrays = new Array();
+			var items = document.getElementById("btn1");
+			for(i=0; i<items.length; i++){
+				arrays.push(items[i].value);
+			}
+			alert(arrays.length);
+		};
+	</script>
+</html>

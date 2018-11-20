@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery.js" type="text/javascript"></script>	
+		
+		<style text="text/css">
+			.content{
+				display:none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="panel">
+			<h5 class="head">什么是jQuery？</h5>
+			<div class="content">
+				这是一段话。钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱反光镜迷哦确认后结果符合进入区分过户。
+			</div>
+		</div>
+	</body> 
+	<script type="text/javascript">
+		
+		//事件绑定bind()方法
+		
+		//绑定click事件
+		/*$(function(){
+			$("#panel h5.head").bind("click",function(){
+				var $content = $(this).next();
+				if($content.is(":visible")){
+					$content.hide();
+				}else{
+					$content.show();
+				}
+			})
+		});*/
+		
+		//绑定mouseover事件和mouseout事件
+		/*$(function(){
+			$("#panel h5.head").bind("mouseover",function(){
+				$(this).next().show();
+			}).bind("mouseout",function(){
+				$(this).next().hide();
+			})
+		});*/
+		
+		//间写mouseover事件和mouseout事件
+		$(function(){
+			$("#panel h5.head").mouseover(function(){
+				$(this).next().show();
+			}).mouseout(function(){
+				$(this).next().hide();
+			});
+		});
+		
+		
+		
+	</script>
+</html>

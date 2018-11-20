@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<script src="jquery.js" type="text/javascript"></script>	
+		
+		<style text="text/css"></style>
+		
+	</head>
+	
+	<body>
+		<p title="选择你最喜欢的水果.">你最喜欢的水果？</p>
+		<ul>
+			<li title="苹果">苹果</li>
+			<li title="橘子">橘子</li>
+			<li title="菠萝">菠萝</li>
+		</ul>
+	</body> 
+	
+	<script type="text/javascript">
+		
+		//属性操作
+		
+		$(function(){
+		
+			//01 获取属性
+			/*alert($("p").attr("title"));*/
+			
+			//02 设置属性
+			/*$("p").attr("title","your title");*/
+			/*$("p").attr({"title":"your title","name":"test"});*/
+			
+			//03 删除属性
+			$("p").removeAttr("title");
+		});
+	</script>
+</html>

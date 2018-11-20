@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery.js" type="text/javascript"></script>	
+		
+		<style text="text/css">
+			
+		</style>
+		
+	</head>
+	<body>
+		<button id="btn">点击我</button>
+		<input type="text"/>
+		<div id="test"></div>
+		
+	</body> 
+	<script type="text/javascript">
+		
+		//模拟事件
+		
+		$(function(){
+		
+			//trigger()方法
+		    $("#btn").bind("click",myFun1=function(event,message1,message2){
+				$("#test").append("<p>"+ message1 + message2 + "</p>");
+			}).bind("myClick",myFun2=function(){
+				$("#test").append("<p>我的自定义事件2</p>");
+			});
+			
+			$("#btn")
+			.trigger("click",["我的","事件1"])//传递数据
+			.trigger("myClick");//自定义事件的触发
+			
+			//trigger()方法(也会触发默认操作)和triggerHandler()方法(不会触发默认操作)
+			//$("input").trigger("focus");
+			$("input").triggerHandler("focus");
+			
+			
+			
+		});
+		
+		
+	</script>
+</html>

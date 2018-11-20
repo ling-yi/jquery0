@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery.js" type="text/javascript"></script>	
+		
+		<style text="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<p title="选择你最喜欢的水果.">你最喜欢的水果？</p>
+		<ul>
+			<li title="苹果">苹果</li>
+			<li title="橘子">橘子</li>
+			<li title="菠萝">菠萝</li>
+		</ul>
+	</body> 
+	<script type="text/javascript">
+	
+		//CSS-DOM操作
+	
+		$(function(){
+			
+			//08805获取样式属性
+			/*alert($("p").css("color"));*/
+			
+			//08901设置样式属性
+			/*$("p").css("color","red");*/
+			
+			//02同时设置多个样式属性
+			/*$("p").css({"fontSize":"30px","backgroundColor":"#888888"});*/
+			
+			//03设置透明度
+			/*$("p").css("opacity","0.5");*/
+			
+			//04两种获取元素高度的对比
+			/*alert($("p").css("height") + "  " + $("p").height());*/
+			
+			//05设置样式属性height
+			$("p").height(100);
+			$("p").height("10em");
+		});
+	</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="../jquery.js" type="text/javascript"></script>	
+		<script src="../jquery.validate.js" type="text/javascript"></script>	
+		<script src="../jquery.metadata.js" type="text/javascript"></script>	
+		<script src="../jquery.validate.messages_cn.js" type="text/javascript"></script>	
+		<style text="text/css">
+			*{font-family: Verdana;font-size: 96%;}
+			label{width: 10em;float: left;}
+			label.error{float: none;color: red;padding-left: 0.5em;vertical-align: top;}
+			p{clear: both;}
+			.submit{margin-left: 12em;}
+			em{font-weight: bold;padding-right: 1em;vertical-align: top;}
+		</style>
+	</head>
+	
+	<body>
+		<form class="cmxform" id="commentForm" method="get" action="#">
+			<fieldset>
+				<legend>一个简单的验证带验证提示的评论例子</legend>
+				<p>
+					<label for="cusername">姓名</label><em>*</em>
+					<input id="cusername" name="username" size="25" class="{validata:{ required :true, minlength :2， messages :{required: '请输入姓名' }}}" />
+				</p>
+				<p>
+					<label for="cemail">电子邮件</label><em>*</em>
+					<input id="cemail" name="email" size="25" class="{validata:{ required :true, email :true ，	messages:{required: '请输入姓名' }}" />
+				</p>
+				<p>
+					<label for="curl">网址</label>
+					<input id="curl" name="url" size="25" class="{validata:{ url :true }}" value="" />
+				</p>
+				<p>
+					<label for="ccomment">你的评论</label><em>*</em>
+					<textarea id="ccomment" name="comment" size="22" class="{validata:{ required :true }}"></textarea>
+				</p>
+				<p>
+					<input class="submit" type="submit" value="提交" />
+				</p>
+			</fieldset>
+		</form>
+	</body> 
+	<script type="text/javascript">
+		$(function(){
+			$("#commentForm").validate({meta:"validata"});
+		});
+	</script>
+</html>

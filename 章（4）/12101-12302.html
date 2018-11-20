@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery.js" type="text/javascript"></script>	
+		
+		<style text="text/css">
+			.content{
+				display:none;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="panel">
+			<h5 class="head">新闻标题</h5>
+			<div class="content">
+				哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇哇
+			</div>
+		</div>
+	</body> 
+	<script type="text/javascript">
+		
+		//jquery中的动画
+		
+		$(function(){
+		
+			//show()和hide（）方法
+			/*$("#panel h5.head").click(function(){
+				var $content = $(this).next();
+				if($content.is(":visible")){
+					$content.hide();
+				}else{
+					$content.show();
+				}
+			});*/
+			
+			//加速度参数的show()和hide（）方法
+			/*$("#panel h5.head").click(function(){
+				var $content = $(this).next();
+				if($content.is(":visible")){
+					$content.hide("slow");
+				}else{
+					$content.show("slow");
+				}
+			});*/
+			
+			//fadeIn()和fadeOut()方法
+			/*$("#panel h5.head").click(function(){
+				var $content = $(this).next();
+				if($content.is(":visible")){
+					$content.fadeOut(1000);
+				}else{
+					$content.fadeIn(1000);
+				}
+			});*/
+			
+			//slideUp()和slideDown()方法
+			$("#panel h5.head").click(function(){
+				var $content = $(this).next();
+				if($content.is(":visible")){
+					$content.slideUp("slow");
+				}else{
+					$content.slideDown("slow");
+				}
+			});
+		});
+		
+		
+	</script>
+</html>

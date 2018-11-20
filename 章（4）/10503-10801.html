@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery.js" type="text/javascript"></script>	
+		
+		<style text="text/css">
+			.content{
+				display:none;
+			}
+			
+			.highlight{
+				background:#FF3300
+			}
+		</style>
+	</head>
+	<body>
+		<div id="panel">
+			<h5 class="head">什么是jQuery？</h5>
+			<div class="content">
+				这是一段话。钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱钱反光镜迷哦确认后结果符合进入区分过户。
+			</div>
+		</div>
+	</body> 
+	<script type="text/javascript">
+		
+		//合成事件
+		
+		//hover()方法
+		$(function(){
+			$("#panel h5.head").hover(function(){
+				$(this).next().show();
+			},function(){
+				$(this).next().hide();
+			});
+		});
+		
+		//toggle()方法
+		/*$(function(){
+		    
+			var flag=0;
+			
+			$("#panel h5.head").click(function(){
+				var $content=$(this);
+				$content.next().toggle();
+				if(flag == 0){
+					$content.addClass("highlight");
+					flag = 1;
+				}else{
+					$content.removeClass("highlight");
+					flag = 0;
+				}
+			});
+		});*/
+		
+		
+	</script>
+</html>

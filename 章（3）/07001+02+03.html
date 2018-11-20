@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery.js" type="text/javascript"></script>	
+		
+		<style text="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<p title="选择你最喜欢的水果.">你最喜欢的水果？</p>
+		<ul>
+			<li title="苹果">0苹果</li>
+			<li title="橘子">1橘子</li>
+			<li title="菠萝">2菠萝</li>
+		</ul>
+	</body> 
+	<script type="text/javascript">
+		
+		//调试“删除节点”
+		
+		$(function(){
+			//01 remove()选择性地删除元素
+			/*$("ul li").remove("li[title!='菠萝']");*/
+			
+			//02 detach()方法
+			/*$("ul li").click(function(){
+				alert($(this).html());
+			});
+			$("ul li:eq(1)").detach().appendTo("ul");*/
+			//对比remove()
+			//$("ul li:eq(1)").remove().appendTo("ul");
+			
+			//03 empty()方法
+			$("ul li:eq(1)").empty();
+			
+			
+		});
+	</script>
+</html>
